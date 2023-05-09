@@ -7,16 +7,16 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #ccc;
+  background-color: #6D6D6D;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #aaa;
+  background-color: #4D4D4D;
 }
 
 ::-webkit-scrollbar-track:hover {
-  background-color: #f2f2f2;
+  background-color: #2D2D2D;
 }
 
 ::-webkit-scrollbar-corner {
@@ -29,7 +29,7 @@
 }
 
 html {
-  background: #202123;
+  background: #1C1C1C;
 }
 
 @media (max-width: 720px) {
@@ -40,4 +40,12 @@ html {
 
 pre:has(div.codeblock) {
   padding: 0;
+  background-color: #2D2D2D;
+  color: #D3D7CF;
+  border-radius: 5px;
+}
+
+pre code {
+  background-color: transparent;
+  color: #D3D7CF;
 }
