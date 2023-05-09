@@ -19,7 +19,7 @@ export const Regenerate: FC<Props> = ({ onRegenerate }) => {
         onClick={onRegenerate}
       >
         <IconRefresh />
-        <div>{t('Regenerate response')}</div>
+        <div>{t('Try that again...')}</div>
       </button>
     </div>
   );
