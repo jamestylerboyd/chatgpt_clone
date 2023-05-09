@@ -355,32 +355,32 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
             Welcome to Eden GPT
           </div>
           <div className="text-center text-lg text-black dark:text-white">
-            <div className="mb-8">{`Chatbot UI is an open source clone of OpenAI's ChatGPT UI.`}</div>
+            <div className="mb-8">{`EdenGPT is an open source clone of OpenAI's ChatGPT UI.`}</div>
             <div className="mb-2 font-bold">
-              Important: Eden GPT is 100% unaffiliated with OpenAI.
+              Important: EdenGPT is NOT affiliated with OpenAI.
             </div>
           </div>
           <div className="text-center text-gray-500 dark:text-gray-400">
             <div className="mb-2">
-              Eden GPT allows you to plug in an OpenAi API key to use this UI with the power of GPT-4, no cap.
+              EdenGPT allows you to plug in our OpenAi API key to use this beta UI with the power of GPT-4.
             </div>
             <div className="mb-2">
               It was <span className="italic">created</span> by James Boyd and The Eden Alliance.
             </div>
             <div className="mb-2">
               {t(
-                'Please set your Secret API key in the bottom left of the sidebar.',
+                'Please set the Secret API key given to you in the bottom left of the sidebar.',
               )}
             </div>
             <div>
-              {t("Visit the creators website here: ")}
+              {t(" James' Mega Prompt Library: ")}
               <a
-                href="https://yfj.social"
+                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
                 target="_blank"
                 rel="noreferrer"
                 className="text-blue-500 hover:underline"
               >
-                yfj.social
+                yfj.social/megaprompt
               </a>
             </div>
           </div>
@@ -403,7 +403,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
                         <Spinner size="16px" className="mx-auto" />
                       </div>
                     ) : (
-                      'Chatbot UI'
+                      'EdenGPT'
                     )}
                   </div>
 
