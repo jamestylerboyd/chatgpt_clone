@@ -33,17 +33,21 @@ function App({ Component, pageProps }: AppProps<{}>) {
           .text-animation {
             font-family: "Courier New", monospace;
             color: white;
-            text-align: center;
+            text-align: left;
             white-space: nowrap;
-          }
-
-          .text-animation h1,
-          .text-animation h2 {
             animation: typing 2s steps(40), blink 1s infinite step-end;
             overflow: hidden;
             border-right: 2px solid white;
             margin: 0;
             padding: 0 0.5rem;
+          }
+
+          .text-animation h1 {
+            animation-delay: 0s;
+          }
+
+          .text-animation h2 {
+            animation-delay: 2s;
           }
 
           @keyframes typing {
