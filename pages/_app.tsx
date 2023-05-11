@@ -10,7 +10,15 @@ import '@/styles/globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 function App({ Component, pageProps }: AppProps<{}>) {
-  const isSiteDown = true; // Set this flag to true when the site is down
+  const [isSiteDown, setIsSiteDown] = useState(true); // Set this flag to true when the site is down
+
+  useEffect(() => {
+    // Simulating an API call to check if the site is down
+    // Replace this with your actual API call or condition to determine if the site is down
+    setTimeout(() => {
+      setIsSiteDown(false);
+    }, 5000);
+  }, []);
 
   if (isSiteDown) {
     const [apples, setApples] = useState([]);
@@ -111,8 +119,6 @@ function App({ Component, pageProps }: AppProps<{}>) {
         `}</style>
       </div>
     );
-  }
-
   const queryClient = new QueryClient();
 
   return (
