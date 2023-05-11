@@ -18,6 +18,14 @@ function App({ Component, pageProps }: AppProps<{}>) {
           <div className="text-animation">
             <h1>Eden is hard at work...</h1>
             <h2>We will be back shortly...</h2>
+            <div className="tree-animation">
+              <pre>
+                {' '}
+                <span className="apple">o</span>
+                <br /> /\ <br />
+                /__\
+              </pre>
+            </div>
           </div>
         </div>
 
@@ -26,6 +34,7 @@ function App({ Component, pageProps }: AppProps<{}>) {
             background-color: black;
             height: 100vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
           }
@@ -35,6 +44,16 @@ function App({ Component, pageProps }: AppProps<{}>) {
             color: white;
             text-align: center;
             white-space: nowrap;
+          }
+
+          .tree-animation {
+            color: green;
+            animation: fall 2s infinite;
+          }
+
+          .apple {
+            color: red;
+            animation: blink 1s infinite step-end;
           }
 
           .text-animation h1,
@@ -62,6 +81,18 @@ function App({ Component, pageProps }: AppProps<{}>) {
             }
             50% {
               border-color: white;
+            }
+          }
+
+          @keyframes fall {
+            0% {
+              transform: translateY(0);
+            }
+            50% {
+              transform: translateY(100px);
+            }
+            100% {
+              transform: translateY(-100px);
             }
           }
         `}</style>
