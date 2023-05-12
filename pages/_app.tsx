@@ -1,11 +1,10 @@
 import { Toaster } from 'react-hot-toast';
 import { QueryClient, QueryClientProvider } from 'react-query';
+
 import { appWithTranslation } from 'next-i18next';
 import type { AppProps } from 'next/app';
 import { Inter } from 'next/font/google';
-
-import '@/styles/globals.css';
-
+@@ -10,6 +9,66 @@ import '@/styles/globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 function App({ Component, pageProps }: AppProps<{}>) {
@@ -15,13 +14,9 @@ function App({ Component, pageProps }: AppProps<{}>) {
     return (
       <div className={inter.className}>
         <div className="black-screen">
-          <div className="text-container">
-            <div className="text-animation">
-              <h1>Eden is hard at work...</h1>
-            </div>
-            <div className="text-animation">
-              <h2>We will be back shortly...</h2>
-            </div>
+          <div className="text-animation">
+            <h1>Eden is hard at work...</h1>
+            <h2>We will be back shortly...</h2>
           </div>
         </div>
 
@@ -33,33 +28,20 @@ function App({ Component, pageProps }: AppProps<{}>) {
             align-items: center;
             justify-content: center;
           }
-
-          .text-container {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-          }
-
           .text-animation {
             font-family: "Courier New", monospace;
             color: white;
-            text-align: left;
+            text-align: center;
             white-space: nowrap;
-            animation: typing 4s steps(40), blink 1s infinite step-end;
+          }
+          .text-animation h1,
+          .text-animation h2 {
+            animation: typing 2s steps(40), blink 1s infinite step-end;
             overflow: hidden;
             border-right: 2px solid white;
             margin: 0;
             padding: 0 0.5rem;
           }
-
-          .text-animation h1 {
-            animation-delay: 0.5s;
-          }
-
-          .text-animation h2 {
-            animation-delay: 4.5s;  // the delay here should be the sum of the delay of h1 and its animation duration
-          }
-
           @keyframes typing {
             from {
               width: 0;
@@ -68,7 +50,6 @@ function App({ Component, pageProps }: AppProps<{}>) {
               width: 100%;
             }
           }
-
           @keyframes blink {
             from,
             to {
@@ -94,5 +75,4 @@ function App({ Component, pageProps }: AppProps<{}>) {
     </div>
   );
 }
-
 export default appWithTranslation(App);
