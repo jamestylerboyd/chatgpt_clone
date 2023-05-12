@@ -57,7 +57,7 @@ function App({ Component, pageProps }: AppProps<{}>) {
           }
 
           .text-animation h2 {
-            animation-delay: 2.5s;
+            animation-delay: 4.5s;  // the delay here should be the sum of the delay of h1 and its animation duration
           }
 
           @keyframes typing {
