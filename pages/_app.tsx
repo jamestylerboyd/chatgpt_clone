@@ -15,9 +15,13 @@ function App({ Component, pageProps }: AppProps<{}>) {
     return (
       <div className={inter.className}>
         <div className="black-screen">
-          <div className="text-animation">
-            <h1>Eden is hard at work...</h1>
-            <h2>We will be back shortly...</h2>
+          <div className="text-container">
+            <div className="text-animation">
+              <h1>Eden is hard at work...</h1>
+            </div>
+            <div className="text-animation">
+              <h2>We will be back shortly...</h2>
+            </div>
           </div>
         </div>
 
@@ -30,12 +34,18 @@ function App({ Component, pageProps }: AppProps<{}>) {
             justify-content: center;
           }
 
+          .text-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+          }
+
           .text-animation {
             font-family: "Courier New", monospace;
             color: white;
             text-align: left;
             white-space: nowrap;
-            animation: typing 2s steps(40), blink 1s infinite step-end;
+            animation: typing 4s steps(40), blink 1s infinite step-end;
             overflow: hidden;
             border-right: 2px solid white;
             margin: 0;
@@ -43,11 +53,11 @@ function App({ Component, pageProps }: AppProps<{}>) {
           }
 
           .text-animation h1 {
-            animation-delay: 0s;
+            animation-delay: 0.5s;
           }
 
           .text-animation h2 {
-            animation-delay: 2s;
+            animation-delay: 2.5s;
           }
 
           @keyframes typing {
